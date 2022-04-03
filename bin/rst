@@ -1,0 +1,3 @@
+size=$1
+
+sed -i .bak "s/.*size:.*/  size: $size.0/" /Users/agreene/dev-env/resources/alacritty.yml
