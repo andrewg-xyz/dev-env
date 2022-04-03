@@ -16,6 +16,11 @@ else
   echo  "...Homebrew already installed"
 fi
 
+echo "Updating using Homebrew..."
+cd $script_path/osx
+./run-brew.sh
+cd - >/dev/null
+
 echo "Checking for oh-my-zsh..."
 if [[ ! -a ~/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -34,14 +39,14 @@ else
     cd - >/dev/null
 fi
 
-echo "Checking for Go Version Manager (gvm)"
+echo "Checking for Go Version Manager (gvm)..."
 if [[ ! -a ~/.gvm ]]; then
     sh -c "$(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)"
 else
     echo "...gvm already installed"
 fi
 
-echo "Setting dotfile/s"
+echo "Setting dotfile/s..."
 rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.yml ~/.tmux.conf ~/.hammerspoon/init.lua
 ln -s $script_path/resources/.zshrc ~/.zshrc
 ln -s $script_path/resources/buzzbert/.aliases ~/.aliases
@@ -56,25 +61,19 @@ ln -s $script_path/resources/init.lua ~/.hammerspoon/init.lua
 
 echo "Updating /etc/hosts and ssh config..."
 if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then
-    echo "No host and config file found. not making life better"
+    echo "...No host and config file found. not making life better"
 else
-    echo "Updating Hosts file"
+    echo "...Updating Hosts file"
     head="### BEGIN GENERATED CONTENT (unique-spiderman)"
     tail="### END GENERATED CONTENT"
     newContent=`cat resources/buzzbert/hosts`
-    if grep -q $head /etc/hosts; then
-        echo "  Deleting custom configuration"
-        sudo sed -i.bak "/$head/,/$tail/d" /etc/hosts
-    fi
-    echo "  Adding custom configuration"
+    sudo sed -i.bak "/$head/,/$tail/d" /etc/hosts
+    echo "...Adding custom configuration"
     newContent="$head\n$newContent\n$tail"
     echo $newContent | sudo tee -a /etc/hosts
-
-    echo "\nUpdating SSH Config"
+    echo "Updating SSH Config..."
     cp -f resources/buzzbert/config ~/.ssh/config
 fi
 
-echo "Updating using Homebrew..."
-cd $script_path/osx
-./run-brew.sh
-cd - >/dev/null
+
+echo "\nHappy Developing!!!"

@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 brew update
-brew bundle --verbose
+brew bundle
 brew bundle cleanup --force
