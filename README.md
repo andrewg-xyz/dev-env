@@ -2,6 +2,8 @@
 
 Development environment configuration and utilities. A collection of software gadgetry to make it easier to port my development environment. 
 
+Ultimate Goal: make moving to any machine/OS as easy as `git clone... & configure.sh`
+
 Suggestions and ideas are welcome! Start with reviewing existing or submitting an issue.
 
 ## Initial Setup
