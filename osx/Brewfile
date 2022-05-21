@@ -47,3 +47,7 @@ brew "gnupg@2.2"
 brew "k3d"
 brew "jq"
 brew "istioctl"
+
+tap "norwoodj/tap"
+brew "helm-docs"
+
