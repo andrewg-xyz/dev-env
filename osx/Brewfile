@@ -36,6 +36,8 @@ brew "urlview"
 brew "podman"
 cask "hammerspoon"
 cask "miro"
+brew "kind"
+brew "thefuck"
 
 tap "fluxcd/tap"
 brew "flux"
