@@ -6,7 +6,7 @@ tap "homebrew/core"
 tap "homebrew/cask-fonts"
 cask "font-inconsolata-go-nerd-font"
 cask "alacritty"
-brew "tmux"
+# brew "tmux" v3.3 is broked... manually installing for now https://github.com/tmux/tmux v3.2a
 
 brew "git"
 brew "git-lfs"
