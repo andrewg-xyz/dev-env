@@ -54,3 +54,5 @@ brew "istioctl"
 tap "norwoodj/tap"
 brew "helm-docs"
 
+tap "defenseunicorns/homebrew-tap"
+brew "zarf"
