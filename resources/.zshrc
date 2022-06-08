@@ -80,6 +80,7 @@ alias k-pb-il5-dsop-prod='export KUBECONFIG=$HOME/.kube/pb-il5-dsop-prod && echo
 alias khmgmt='export KUBECONFIG=$HOME/.kube/khmgmt && echo $KUBECONFIG'
 alias khh='export KUBECONFIG=$HOME/.kube/khh && echo $KUBECONFIG'
 
+eval $(thefuck --alias)
 
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
@@ -87,7 +88,5 @@ source $ZSH/oh-my-zsh.sh
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
-
-eval $(thefuck --alias)
 
 PROMPT='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'$PROMPT
