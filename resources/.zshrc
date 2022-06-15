@@ -72,13 +72,7 @@ alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 source ~/.aliases
 
 alias ide='open -na "GoLand.app" --args "$@"'
-alias bb='cd $HOME/repos/repo1/p1/bb/bigbang'
-alias k-pb-dsop-preprod='export KUBECONFIG=$HOME/.kube/pb-dsop-preprod && echo $KUBECONFIG'
-alias k-pb-il2-dsop-prod='export KUBECONFIG=$HOME/.kube/pb-il2-dsop-prod && echo $KUBECONFIG'
-alias k-pb-il4-dsop-prod='export KUBECONFIG=$HOME/.kube/pb-il4-dsop-prod && echo $KUBECONFIG'
-alias k-pb-il5-dsop-prod='export KUBECONFIG=$HOME/.kube/pb-il5-dsop-prod && echo $KUBECONFIG'
-alias khmgmt='export KUBECONFIG=$HOME/.kube/khmgmt && echo $KUBECONFIG'
-alias khh='export KUBECONFIG=$HOME/.kube/khh && echo $KUBECONFIG'
+alias k-k3s='export KUBECONFIG=$HOME/.kube/k3s-home && echo $KUBECONFIG'
 
 eval $(thefuck --alias)
 
