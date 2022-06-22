@@ -73,6 +73,7 @@ source ~/.aliases
 
 alias ide='open -na "GoLand.app" --args "$@"'
 alias k-k3s='export KUBECONFIG=$HOME/.kube/k3s-home && echo $KUBECONFIG'
+alias k-harv='export KUBECONFIG=$HOME/.kube/harvester.yaml && echo $KUBECONFIG'
 
 eval $(thefuck --alias)
 
