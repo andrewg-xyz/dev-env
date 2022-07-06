@@ -67,13 +67,15 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias k=kubectl
 alias tf=terraform
 
-
+alias enable-time-prompt="export PROMPT='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'$PROMPT"
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-source ~/.aliases
-
 alias ide='open -na "GoLand.app" --args "$@"'
 alias k-k3s='export KUBECONFIG=$HOME/.kube/k3s-home && echo $KUBECONFIG'
 alias k-harv='export KUBECONFIG=$HOME/.kube/harvester.yaml && echo $KUBECONFIG'
+alias f='fuck'
+alias zda='zarf destroy --confirm --remove-components'
+
+source ~/.aliases
 
 eval $(thefuck --alias)
 
@@ -83,5 +85,3 @@ source $ZSH/oh-my-zsh.sh
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
-
-PROMPT='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'$PROMPT

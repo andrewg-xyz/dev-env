@@ -1,0 +1,10 @@
+#!/bin/sh
+
+clusterName="$1"
+
+if [ -z "$clusterName" ]; then
+  echo "No Cluster provided, searching for options..."
+  eksctl get clusters
+  exit 1
+fi
+aws eks update-kubeconfig --name $clusterName

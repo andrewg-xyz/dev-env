@@ -38,6 +38,8 @@ cask "hammerspoon"
 cask "miro"
 brew "kind"
 brew "thefuck"
+tap "weaveworks/tap"
+brew "eksctl"
 
 tap "fluxcd/tap"
 brew "flux"
