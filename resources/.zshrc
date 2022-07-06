@@ -67,7 +67,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias k=kubectl
 alias tf=terraform
 
-alias enable-time-prompt="export PROMPT='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'$PROMPT"
+PROMPT_UPDATE='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'
+alias enable-time-prompt='export PROMPT=$PROMPT_UPDATE$PROMPT'
+alias disable-time-prompt='source ~/.zshrc' #lol-cmd-amirit
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias ide='open -na "GoLand.app" --args "$@"'
 alias k-k3s='export KUBECONFIG=$HOME/.kube/k3s-home && echo $KUBECONFIG'
