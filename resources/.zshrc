@@ -54,13 +54,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
-# export JAVA_HOME=$(/usr/libexec/java_home)
-# export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-# export JAVA_15_HOME=$(/usr/libexec/java_home -v15)
-
-# alias java8='export JAVA_HOME=$JAVA_8_HOME'
-# alias java15='export JAVA_HOME=$JAVA_15_HOME'
-
+# https://cloud.google.com/sdk/docs/install-sdk
+export PATH=$PATH:/usr/local/opt/google-cloud-sdk/bin
 export PATH=/usr/local/opt/gnupg@2.2/bin:$PATH
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
