@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo "reminder run 'source k-config arg'"
+
+configFile=$1
+
+if [ -z $configFile ]; then
+    echo "Error: provide a config file or path"
+    exit 1;
+fi
+
+fullPath=`readlink -f "$configFile"`
+
+echo "setting kubeconfig to $fullPath"
+export KUBECONFIG=$fullPath
+echo $KUBECONFIG

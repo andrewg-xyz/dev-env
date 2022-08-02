@@ -67,8 +67,6 @@ alias enable-time-prompt='export PROMPT=$PROMPT_UPDATE$PROMPT'
 alias disable-time-prompt='source ~/.zshrc' #lol-cmd-amirit
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias ide='open -na "GoLand.app" --args "$@"'
-alias k-k3s='export KUBECONFIG=$HOME/.kube/k3s-home && echo $KUBECONFIG'
-alias k-harv='export KUBECONFIG=$HOME/.kube/harvester.yaml && echo $KUBECONFIG'
 alias f='fuck'
 alias zda='zarf destroy --confirm --remove-components'
 
