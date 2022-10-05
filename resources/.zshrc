@@ -43,6 +43,7 @@ function precmd() {
 }
 
 # User configuration
+export K9S_HOME=$HOME/Library/Preferences/k9s
 
 # git auto complete (https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Zsh)
 autoload -Uz compinit && compinit
@@ -69,6 +70,7 @@ alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias ide='open -na "GoLand.app" --args "$@"'
 alias f='fuck'
 alias zda='zarf destroy --confirm --remove-components'
+alias virtctl=/usr/local/bin/virtctl-v0.55.0
 
 source ~/.aliases
 
