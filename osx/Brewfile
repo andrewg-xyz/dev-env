@@ -39,6 +39,7 @@ brew "thefuck"
 tap "weaveworks/tap"
 brew "eksctl"
 brew "skopeo"
+cask "brave-browser"
 
 tap "fluxcd/tap"
 brew "flux"
