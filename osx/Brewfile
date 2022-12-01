@@ -40,6 +40,8 @@ brew "eksctl"
 brew "skopeo"
 cask "brave-browser"
 brew "bat"
+cask "visual-studio-code"
+cask "ferdi"
 
 tap "fluxcd/tap"
 brew "flux"

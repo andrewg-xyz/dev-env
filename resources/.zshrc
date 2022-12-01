@@ -69,7 +69,7 @@ alias disable-time-prompt='source ~/.zshrc' #lol-cmd-amirit
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias ide='open -na "GoLand.app" --args "$@"'
 alias zda='zarf destroy --confirm --remove-components'
-alias virtctl=/usr/local/bin/virtctl-v0.55.0
+alias virtctl=/usr/local/bin/virtctl-v0.58.0
 alias k9s='k9s --headless'
 
 source ~/.aliases
