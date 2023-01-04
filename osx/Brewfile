@@ -6,7 +6,7 @@ tap "homebrew/core"
 tap "homebrew/cask-fonts"
 cask "font-inconsolata-go-nerd-font"
 cask "alacritty"
-# brew "tmux" v3.3 is broked... manually installing for now https://github.com/tmux/tmux v3.2a
+brew "tmux" # Maybe it's okay now? brew "tmux" v3.3 is broked... manually installing for now https://github.com/tmux/tmux v3.2a
 
 brew "git"
 brew "git-lfs"
@@ -37,8 +37,8 @@ cask "miro"
 brew "kind"
 tap "weaveworks/tap"
 brew "eksctl"
+brew "aws-iam-authenticator" # dependency for eksctl, including here to get rid of annoying error message
 brew "skopeo"
-cask "brave-browser"
 brew "bat"
 cask "visual-studio-code"
 cask "ferdi"

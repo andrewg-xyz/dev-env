@@ -67,14 +67,11 @@ PROMPT_UPDATE='%{$fg[yellow]%}[%D{%L:%M:%S.%N}] %{$reset_color%}'
 alias enable-time-prompt='export PROMPT=$PROMPT_UPDATE$PROMPT'
 alias disable-time-prompt='source ~/.zshrc' #lol-cmd-amirit
 alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias ide='open -na "GoLand.app" --args "$@"'
 alias zda='zarf destroy --confirm --remove-components'
 alias virtctl=/usr/local/bin/virtctl-v0.58.0
 alias k9s='k9s --headless'
 
 source ~/.aliases
-
-eval $(thefuck --alias)
 
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
