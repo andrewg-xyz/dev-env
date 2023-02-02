@@ -11,7 +11,10 @@ echo "Checking for Homebrew..."
 which brew >/dev/null
 brew_inst=`echo $?`
 if [[ $brew_inst == 1 ]]; then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/andrewgreene/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/andrewgreene/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   echo  "...Homebrew already installed"
 fi
