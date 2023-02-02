@@ -57,7 +57,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # https://cloud.google.com/sdk/docs/install-sdk
 export PATH=$PATH:/usr/local/opt/google-cloud-sdk/bin
-export PATH=/usr/local/opt/gnupg@2.2/bin:$PATH
+export PATH=/opt/homebrew/opt/gnupg@2.2/bin:$PATH
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias k=kubectl
