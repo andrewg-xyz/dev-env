@@ -1,5 +1,17 @@
 #!/bin/sh
 
+asdf_plugin() {
+  // Check for asdf plugin and install if not present
+  local name=$1
+  local url=$2
+  if ! `asdf plugin list | grep -q "$name"`; then
+    echo "...adding $name"
+    asdf plugin add "$name" "$url"
+  else
+    echo "...$name already installed"
+  fi
+}
+
 if [[ `uname` != "Darwin" ]]; then
   echo "Unsupported operating system"
   exit 1;
@@ -42,11 +54,13 @@ else
     cd - >/dev/null
 fi
 
-echo "Checking for Go Version Manager (gvm)..."
-if [[ ! -a ~/.gvm ]]; then
-    sh -c "$(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)"
+echo "Checking for asdf..."
+if [[ -a ~/.asdf ]]; then
+  echo "...checking asdf plugins"
+  asdf_plugin golang https://github.com/kennyp/asdf-golang.git
+  asdf_plugin nodejs https://github.com/asdf-vm/asdf-nodejs.git
 else
-    echo "...gvm already installed"
+  echo "...asdf not installed. it will be installed by brew."
 fi
 
 echo "Setting dotfile/s..."

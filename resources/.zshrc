@@ -53,10 +53,6 @@ autoload -Uz compinit && compinit
 export PATH=$PATH:$GOPATH:$GOBIN
 source $HOME/.gvm/scripts/gvm
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
 # https://cloud.google.com/sdk/docs/install-sdk
 export PATH=$PATH:/usr/local/opt/google-cloud-sdk/bin
 export PATH=/opt/homebrew/opt/gnupg@2.2/bin:$PATH
