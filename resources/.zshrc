@@ -48,6 +48,8 @@ export K9S_HOME=$HOME/Library/Preferences/k9s
 # git auto complete (https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Zsh)
 autoload -Uz compinit && compinit
 
+ . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 export PATH=$PATH:$GOPATH:$GOBIN
 source $HOME/.gvm/scripts/gvm
 
