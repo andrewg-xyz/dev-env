@@ -38,6 +38,7 @@ brew "aws-iam-authenticator" # dependency for eksctl, including here to get rid 
 brew "bat"
 cask "visual-studio-code"
 brew "asdf"
+cask "appgate-sdp-client"
 
 tap "fluxcd/tap"
 brew "flux"
