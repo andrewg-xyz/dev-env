@@ -65,16 +65,9 @@ fi
 
 echo "Setting dotfile/s..."
 rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.yml ~/.tmux.conf ~/.hammerspoon/init.lua
-ln -s $script_path/resources/.zshrc ~/.zshrc
-ln -s $script_path/resources/buzzbert/.aliases ~/.aliases
-
 mkdir -p ~/.config/alacritty
-ln -s $script_path/resources/alacritty.yml ~/.config/alacritty/alacritty.yml
-
-ln -s $script_path/resources/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.hammerspoon/
-
-ln -s $script_path/resources/init.lua ~/.hammerspoon/init.lua
+gsd configure # Use GSD to set links
 
 echo "Updating /etc/hosts and ssh config..."
 if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then

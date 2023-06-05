@@ -28,7 +28,8 @@ COMPLETION_WAITING_DOTS="true"
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=( git kubectl macos )
+plugins=( kubectl macos )
+
 
 function preexec() {
     typeset -gi CALCTIME=1
@@ -68,6 +69,18 @@ alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias zda='zarf destroy --confirm --remove-components'
 alias virtctl=/usr/local/bin/virtctl-v0.58.0
 alias k9s='k9s --headless'
+
+# Yeah, so like I don't use all the git aliases, but I do use some of them
+alias g=git
+alias ga='git add'
+alias gb='git branch'
+alias gbl='git blame -b -w'
+alias gc='git commit --verbose'
+alias gco='git checkout'
+alias glo='git log --oneline --decorate'
+alias gsb='git status --short --branch'
+alias gss='git status --short'
+alias gst='git status'
 
 source ~/.aliases
 

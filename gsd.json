@@ -1,0 +1,28 @@
+{
+  "kind": "GSDConfig",
+  "metadata": {
+    "name": "dev-env"
+  },
+  "dotfiles": [
+    {
+      "name": "./resources/.zshrc",
+      "path": "~/.zshrc"
+    },
+    {
+      "name": "./resources/.tmux.conf",
+      "path": "~/.tmux.conf"
+    },
+    {
+      "name": "./resources/buzzbert/.aliases",
+      "path": "~/.aliases"
+    },
+    {
+      "name": "./resources/alacritty.yml",
+      "path": "~/.config/alacritty/alacritty.yml"
+    },
+    {
+      "name": "./resources/init.lua",
+      "path": "~/.hammerspoon/init.lua"
+    }
+  ]
+}
