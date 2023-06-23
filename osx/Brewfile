@@ -40,8 +40,7 @@ cask "visual-studio-code"
 brew "asdf"
 cask "appgate-sdp-client"
 
-tap "fluxcd/tap"
-brew "flux"
+brew "fluxcd/tap/flux"
 cask "docker"
 brew "helm"
 brew "kubectl"
@@ -58,3 +57,5 @@ brew "helm-docs"
 
 tap "defenseunicorns/homebrew-tap"
 brew "zarf"
+
+brew "adr-tools"
