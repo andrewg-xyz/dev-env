@@ -40,6 +40,7 @@ cask "visual-studio-code"
 brew "asdf"
 cask "appgate-sdp-client"
 
+tap "fluxcd/tap"
 brew "fluxcd/tap/flux"
 cask "docker"
 brew "helm"
