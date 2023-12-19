@@ -4,7 +4,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 
 tap "homebrew/cask-fonts"
-cask "font-inconsolata-go-nerd-font"
 cask "alacritty"
 brew "tmux"
 
@@ -57,4 +56,5 @@ tap "defenseunicorns/homebrew-tap"
 brew "zarf"
 
 brew "adr-tools"
-brew "dagger/tap/dagger"
+cask "thunderbird"
+cask "font-monaspace"
