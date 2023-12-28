@@ -15,15 +15,15 @@ scrolling:
 
 font:
   normal:
-    family: InconsolataGo Nerd Font
+    family: Monaspace Krypton
     style: Regular
 
   bold:
-    family: InconsolataGo Nerd Font
+    family: Monaspace Krypton
     style: Bold
 
   italic:
-    family: InconsolataGo Nerd Font
+    family: Monaspace Krypton
     style: Italic
   size: 25.0
 
