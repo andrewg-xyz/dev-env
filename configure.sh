@@ -64,7 +64,7 @@ else
 fi
 
 echo "Setting dotfile/s..."
-rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.yml ~/.tmux.conf ~/.hammerspoon/init.lua
+rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.toml ~/.tmux.conf ~/.hammerspoon/init.lua
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.hammerspoon/
 gsd configure # Use GSD to set links
