@@ -1,0 +1,77 @@
+==> Updating Homebrew...
+Already up-to-date.
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Tapping homebrew/bundle
+Cloning into '/home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-bundle'...
+remote: Enumerating objects: 8160, done.
+remote: Counting objects: 100% (2243/2243), done.
+remote: Compressing objects: 100% (452/452), done.
+remote: Total 8160 (delta 1890), reused 2027 (delta 1782), pack-reused 5917
+Receiving objects: 100% (8160/8160), 1.98 MiB | 5.30 MiB/s, done.
+Resolving deltas: 100% (4765/4765), done.
+Tapped 1 command (109 files, 2.6MB).
+Using homebrew/bundle
+Tapping homebrew/cask-versions
+Error: homebrew/cask-versions was deprecated. This tap is now empty and all its contents were either deleted or migrated.
+Tapping homebrew/cask-versions has failed!
+Tapping homebrew/cask-fonts
+Error: homebrew/cask-fonts was deprecated. This tap is now empty and all its contents were either deleted or migrated.
+Tapping homebrew/cask-fonts has failed!
+Skipping cask alacritty (on Linux)
+Installing tmux
+Installing git
+Installing git-lfs
+Installing tree
+Skipping cask google-chrome (on Linux)
+Skipping cask zoom (on Linux)
+Skipping cask signal (on Linux)
+Skipping cask spotify (on Linux)
+Installing watch
+Skipping cask drawio (on Linux)
+Skipping cask slack (on Linux)
+Skipping cask discord (on Linux)
+Installing awscli
+Installing speedtest-cli
+Installing clamav
+Skipping cask balenaetcher (on Linux)
+Skipping smimesign (no bottle for Linux)
+Installing k9s
+Skipping cask obs (on Linux)
+Installing urlview
+Skipping cask hammerspoon (on Linux)
+Installing kind
+Tapping weaveworks/tap
+Installing eksctl
+Installing aws-iam-authenticator
+Installing bat
+Skipping cask visual-studio-code (on Linux)
+Installing asdf
+Skipping cask docker (on Linux)
+Installing helm
+Installing kubectl
+Installing sops
+Installing kustomize
+Installing gnupg@2.2
+Installing k3d
+Installing jq
+Installing gh
+Tapping norwoodj/tap
+Installing helm-docs
+Tapping defenseunicorns/tap
+Warning: 'zarf' formula is unreadable: No available formula with the name "zarf". Did you mean zbar?
+Installing zarf
+Warning: 'zarf' formula is unreadable: No available formula with the name "zarf". Did you mean zbar?
+Installing adr-tools
+Skipping cask font-monaspace (on Linux)
+Installing typst
+Installing opentofu
+Skipping cask android-studio (on Linux)
+Installing asciinema
+Installing agg
+Homebrew Bundle failed! 2 Brewfile dependencies failed to install.
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Pruned 0 symbolic links and 22 directories from /home/linuxbrew/.linuxbrew

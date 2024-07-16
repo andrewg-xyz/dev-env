@@ -1,11 +1,10 @@
 # OS Specific setup
 unameOut="$(uname -s)"
 case "${unameOut}" in
-    Linux*)     export PATH=$PATH:~/.linuxbrew/bin
-                ;;
-    Darwin*)    export PATH=$PATH:~/dev-env/osx/bin:~/dev-env/bin:~/.tmux/plugins/tpm
-                ;;
-    *)          echo "UNKNOWN:${unameOut} not adding bin folder"
+Darwin*)
+    export PATH=$PATH:~/dev-env/osx/bin:~/dev-env/bin:~/.tmux/plugins/tpm
+    ;;
+*) echo "UNKNOWN:${unameOut} not adding bin folder" ;;
 esac
 
 # Path to your oh-my-zsh installation.
@@ -28,15 +27,14 @@ COMPLETION_WAITING_DOTS="true"
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=( kubectl macos )
-
+plugins=(kubectl macos)
 
 function preexec() {
     typeset -gi CALCTIME=1
     typeset -gi CMDSTARTTIME=SECONDS
 }
 function precmd() {
-    if (( CALCTIME )) ; then
+    if ((CALCTIME)); then
         typeset -gi ETIME=SECONDS-CMDSTARTTIME
         EXEC_TIME="took $ETIME s"
     fi
@@ -49,10 +47,7 @@ export K9S_HOME=$HOME/Library/Preferences/k9s
 # git auto complete (https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Zsh)
 autoload -Uz compinit && compinit
 
- . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-export PATH=$PATH:$GOPATH:$GOBIN
-source $HOME/.gvm/scripts/gvm
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # https://cloud.google.com/sdk/docs/install-sdk
 export PATH=$PATH:/usr/local/opt/google-cloud-sdk/bin
@@ -87,6 +82,8 @@ source ~/.aliases
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
