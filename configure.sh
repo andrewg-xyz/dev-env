@@ -59,6 +59,7 @@ if [[ -a ~/.asdf ]]; then
   echo "...checking asdf plugins"
   asdf_plugin golang https://github.com/kennyp/asdf-golang.git
   asdf_plugin nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf_plugin uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
 else
   echo "...asdf not installed. it will be installed by brew."
 fi

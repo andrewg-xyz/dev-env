@@ -69,6 +69,7 @@ fi
 
 asdf_plugin golang https://github.com/kennyp/asdf-golang.git
 asdf_plugin nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf_plugin uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
 
 echo "Setting dotfile/s..."
 rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.toml ~/.tmux.conf ~/.hammerspoon/init.lua
