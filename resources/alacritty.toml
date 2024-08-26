@@ -42,7 +42,7 @@ style = "Block"
 unfocused_hollow = true
 
 [font]
-size = 25.0
+size = 20.0
 
 [font.bold]
 family = "Monaspace Krypton"
