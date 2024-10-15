@@ -1,0 +1,34 @@
+# "https://dlvhdr.github.io/gh-dash/"
+
+prSections:
+  - filters: is:open repo:defenseunicorns/uds-appstore
+    title: appstore
+  - filters: is:open author:@me
+    title: mine
+  - filters: is:open review-requested:@me -repo:defenseunicorns/uds-appstore
+    title: review
+  - filters: is:open involves:@me -author:@me -repo:defenseunicorns/uds-appstore -review-requested:@me
+    title: involved
+
+issuesSections:
+  - title: assigned
+    filters: is:open assignee:@me -label:epic
+  - title: epic
+    filters: is:open assignee:@me label:epic
+  - title: appstore-epic
+    filters: is:open label:epic repo:defenseunicorns/uds-appstore -label:uds-package
+  - title: appstore-apps
+    filters: is:open repo:defenseunicorns/uds-appstore label:uds-package
+  - title: created
+    filters: is:open author:@me -label:epic
+
+defaults:
+  layout:
+    # https://github.com/dlvhdr/gh-dash?tab=readme-ov-file#-layout
+    issues:
+      reactions:
+        hidden: true
+  pager:
+    diff: more
+repoPaths:
+  :owner/:repo: ~/repos/gh/:repo

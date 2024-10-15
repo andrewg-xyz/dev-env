@@ -79,6 +79,9 @@ alias gst='git status'
 
 source ~/.aliases
 
+# gh-dash config
+export GH_DASH_CONFIG="$HOME/dev-env/resources/gh-dash-config.yaml"
+
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
 
