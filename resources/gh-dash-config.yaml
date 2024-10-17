@@ -7,7 +7,7 @@ prSections:
     title: mine
   - filters: is:open review-requested:@me -repo:defenseunicorns/uds-appstore
     title: review
-  - filters: is:open involves:@me -author:@me -repo:defenseunicorns/uds-appstore -review-requested:@me
+  - filters: is:open involves:@me -author:@me -repo:defenseunicorns/uds-appstore
     title: involved
 
 issuesSections:
