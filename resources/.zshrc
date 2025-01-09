@@ -85,6 +85,6 @@ export GH_DASH_CONFIG="$HOME/dev-env/resources/gh-dash-config.yaml"
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
 
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
     tmux attach -t default || tmux new -s default
 fi
