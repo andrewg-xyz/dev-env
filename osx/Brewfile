@@ -59,3 +59,11 @@ brew "agg"
 brew "golangci-lint"
 cask "obsidian"
 brew "oras"
+cask "notion"
+brew "grype"
+cask "crane"
+
+tap "chainguard-dev/tap"
+brew "chainguard-dev/tap/chainctl"
+
+brew "pre-commit"
