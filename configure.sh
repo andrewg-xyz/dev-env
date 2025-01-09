@@ -48,6 +48,7 @@ tmux_plugins_dir=~/.tmux/plugins/tpm
 if [[ ! -a ~/.tmux ]]; then
     mkdir -p $tmux_plugins_dir
     git clone https://github.com/tmux-plugins/tpm $tmux_plugins_dir
+    $tmux_plugins_dir/bin/install_plugins
 else
     echo "...updating"
     cd $tmux_plugins_dir && git pull -r
