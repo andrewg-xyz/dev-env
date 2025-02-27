@@ -23,6 +23,14 @@
     {
       "name": "./resources/init.lua",
       "path": "~/.hammerspoon/init.lua"
+    },
+    {
+      "name": "./resources/.gitconfig",
+      "path": "~/.gitconfig"
+    },
+    {
+      "name": "./resources/buzzbert/.gitconfig.private",
+      "path": "~/.gitconfig.private"
     }
   ]
 }

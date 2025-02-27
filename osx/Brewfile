@@ -67,3 +67,4 @@ tap "chainguard-dev/tap"
 brew "chainguard-dev/tap/chainctl"
 
 brew "pre-commit"
+cask "windsurf"

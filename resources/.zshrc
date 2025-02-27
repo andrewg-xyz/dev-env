@@ -82,6 +82,9 @@ source ~/.aliases
 # gh-dash config
 export GH_DASH_CONFIG="$HOME/dev-env/resources/gh-dash-config.yaml"
 
+# Added by Windsurf
+export PATH="/Users/andrewgreene/.codeium/windsurf/bin:$PATH"
+
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
 
