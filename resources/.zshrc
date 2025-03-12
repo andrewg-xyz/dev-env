@@ -88,6 +88,12 @@ export PATH="/Users/andrewgreene/.codeium/windsurf/bin:$PATH"
 # Nothing below here
 source $ZSH/oh-my-zsh.sh
 
-if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]; then
+# if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi 
+
+#  Testing below to disable terminal in windsurf, alternative above
+
+if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ] && [ -z "$VSCODE_INJECTION" ]; then
     tmux attach -t default || tmux new -s default
 fi
