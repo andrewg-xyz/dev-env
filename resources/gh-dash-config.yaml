@@ -1,26 +1,24 @@
 # "https://dlvhdr.github.io/gh-dash/"
 
 prSections:
+  - filters: is:open repo:defenseunicorns/uds-registry
+    title: registry
+  - filters: is:open repo:defenseunicorns/uds-ui
+    title: ui
   - filters: is:open repo:defenseunicorns/uds-appstore
     title: appstore
   - filters: is:open author:@me
     title: mine
-  - filters: is:open review-requested:@me -repo:defenseunicorns/uds-appstore
+  - filters: is:open review-requested:@me
     title: review
-  - filters: is:open involves:@me -author:@me -repo:defenseunicorns/uds-appstore
+  - filters: is:open involves:@me -author:@me
     title: involved
 
 issuesSections:
   - title: assigned
     filters: is:open assignee:@me -label:epic
-  - title: epic
-    filters: is:open assignee:@me label:epic
-  - title: appstore-epic
-    filters: is:open label:epic repo:defenseunicorns/uds-appstore -label:uds-package
-  - title: appstore-apps
-    filters: is:open repo:defenseunicorns/uds-appstore label:uds-package
   - title: created
-    filters: is:open author:@me -label:epic
+    filters: is:open
 
 defaults:
   layout:
