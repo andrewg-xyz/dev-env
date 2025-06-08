@@ -17,8 +17,6 @@ prSections:
 issuesSections:
   - title: assigned
     filters: is:open assignee:@me -label:epic
-  - title: created
-    filters: is:open
 
 defaults:
   layout:

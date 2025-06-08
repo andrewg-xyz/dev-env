@@ -43,7 +43,7 @@ shape = "Beam"
 shape = "Beam"
 
 [font]
-size = 17.0
+size = 20.0
 
 [font.bold]
 family = "FiraCode Nerd Font"
