@@ -9,16 +9,12 @@
       "path": "~/.zshrc"
     },
     {
-      "name": "./resources/.tmux.conf",
-      "path": "~/.tmux.conf"
+      "name": "./resources/.wezterm.lua",
+      "path": "~/.wezterm.lua"
     },
     {
       "name": "./resources/buzzbert/.aliases",
       "path": "~/.aliases"
-    },
-    {
-      "name": "./resources/alacritty.toml",
-      "path": "~/.config/alacritty/alacritty.toml"
     },
     {
       "name": "./resources/init.lua",

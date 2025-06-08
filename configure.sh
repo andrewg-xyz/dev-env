@@ -1,17 +1,5 @@
 #!/bin/sh
 
-asdf_plugin() {
-  // Check for asdf plugin and install if not present
-  local name=$1
-  local url=$2
-  if ! `asdf plugin list | grep -q "$name"`; then
-    echo "...adding $name"
-    asdf plugin add "$name" "$url"
-  else
-    echo "...$name already installed"
-  fi
-}
-
 if [[ `uname` != "Darwin" ]]; then
   echo "Unsupported operating system"
   exit 1;
@@ -43,33 +31,10 @@ else
   echo "...oh-my-zsh already installed"
 fi
 
-echo "Checking for tmux plugins..."
-tmux_plugins_dir=~/.tmux/plugins/tpm
-if [[ ! -a ~/.tmux ]]; then
-    mkdir -p $tmux_plugins_dir
-    git clone https://github.com/tmux-plugins/tpm $tmux_plugins_dir
-    $tmux_plugins_dir/bin/install_plugins
-else
-    echo "...updating"
-    cd $tmux_plugins_dir && git pull -r
-    cd - >/dev/null
-fi
-
-echo "Checking for asdf..."
-if [[ -a ~/.asdf ]]; then
-  echo "...checking asdf plugins"
-  asdf_plugin golang https://github.com/kennyp/asdf-golang.git
-  asdf_plugin nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  asdf_plugin uds-cli https://github.com/defenseunicorns/asdf-uds-cli.git
-else
-  echo "...asdf not installed. it will be installed by brew."
-fi
-
 echo "Setting dotfile/s..."
-rm ~/.zshrc ~/.aliases ~/.config/alacritty/alacritty.toml ~/.tmux.conf ~/.hammerspoon/init.lua
-mkdir -p ~/.config/alacritty
+rm ~/.zshrc ~/.aliases ~/.wezterm.lua ~/.hammerspoon/init.lua
 mkdir -p ~/.hammerspoon/
-gsd configure # Use GSD to set links
+$script_path/bin/gsd configure # Use GSD to set links
 
 echo "Updating /etc/hosts and ssh config..."
 if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then
@@ -86,6 +51,5 @@ else
     echo "Updating SSH Config..."
     cp -f resources/buzzbert/config ~/.ssh/config
 fi
-
 
 echo "\nHappy Developing!!!"

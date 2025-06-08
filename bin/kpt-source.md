@@ -1,1 +1,0 @@
-https://kpt.dev/installation/

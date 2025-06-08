@@ -1,3 +1,0 @@
-size=$1
-
-sed -i .bak "s/size = .*/size = $size.0/" /Users/andrewgreene/dev-env/resources/alacritty.toml
