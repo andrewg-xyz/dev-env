@@ -1,9 +1,14 @@
 #!/bin/sh
+# Usage: ./configure.sh [true|false]
+# true: update /etc/hosts and ssh config
+
 
 if [[ `uname` != "Darwin" ]]; then
   echo "Unsupported operating system"
   exit 1;
 fi
+
+network=$1
 
 script_path="$( cd "$(dirname "$0")" ; pwd -P)"
 
@@ -37,19 +42,21 @@ mkdir -p ~/.hammerspoon/
 $script_path/bin/gsd configure # Use GSD to set links
 
 echo "Updating /etc/hosts and ssh config..."
-if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then
-    echo "...No host and config file found. not making life better"
-else
-    echo "...Updating Hosts file"
-    head="### BEGIN GENERATED CONTENT (unique-spiderman)"
-    tail="### END GENERATED CONTENT"
+if [[ $network == "true" ]]; then
+    if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then
+        echo "...No host and config file found. not making life better"
+    else
+        echo "...Updating Hosts file"
+        head="### BEGIN GENERATED CONTENT (unique-spiderman)"
+        tail="### END GENERATED CONTENT"
     newContent=`cat resources/buzzbert/hosts`
     sudo sed -i.bak "/$head/,/$tail/d" /etc/hosts
-    echo "...Adding custom configuration"
-    newContent="$head\n$newContent\n$tail"
-    echo $newContent | sudo tee -a /etc/hosts
-    echo "Updating SSH Config..."
-    cp -f resources/buzzbert/config ~/.ssh/config
+        echo "...Adding custom configuration"
+        newContent="$head\n$newContent\n$tail"
+        echo $newContent | sudo tee -a /etc/hosts
+        echo "Updating SSH Config..."
+        cp -f resources/buzzbert/config ~/.ssh/config
+    fi
 fi
 
 echo "\nHappy Developing!!!"
