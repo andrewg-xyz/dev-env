@@ -19,6 +19,7 @@ plugins=(macos)
 # gh-dash config
 export GH_DASH_CONFIG="$HOME/dev-env/resources/gh-dash-config.yaml"
 
+export PATH="$PATH:$HOME/dev-env/bin"
 # Added by Windsurf
 export PATH="/Users/andrewgreene/.codeium/windsurf/bin:$PATH"
 

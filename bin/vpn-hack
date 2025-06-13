@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+# Default gateway to use when not specified
+DEFAULT_GATEWAY="23.0.0.1"
+
+# Allow override via command line argument
+if [ $# -eq 1 ]; then
+  CORRECT_GATEWAY=$1
+  echo "Using specified gateway: ${CORRECT_GATEWAY}"
+else
+  CORRECT_GATEWAY=${DEFAULT_GATEWAY}
+  echo "Using default gateway: ${CORRECT_GATEWAY}"
+fi
+
+# Check current default gateway
+CURRENT_GATEWAY=$(route -n get default | grep gateway | awk '{print $2}')
+
+echo "Current gateway: ${CURRENT_GATEWAY}"
+
+# Check if the current gateway is already correct
+if [ "${CURRENT_GATEWAY}" = "${CORRECT_GATEWAY}" ]; then
+  echo "Routing is already correctly configured."
+  exit 0
+fi
+
+# If we reach here, we need to fix the gateway
+echo "Incorrect gateway detected: ${CURRENT_GATEWAY}"
+
+# Delete the incorrect routing
+echo "Removing incorrect default route..."
+sudo route delete -net 0.0.0.0/0
+
+# Add the correct routing with the proper gateway
+echo "Adding correct default route through ${CORRECT_GATEWAY}..."
+sudo route add -net 0.0.0.0/0 ${CORRECT_GATEWAY}
+
+echo "VPN routing fixed!"
+exit 0
