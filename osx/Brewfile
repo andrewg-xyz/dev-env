@@ -5,7 +5,6 @@
 # # cask "alacritty"
 # # brew "tmux"
 
-# brew "git"
 # # brew "git-lfs"
 # brew "tree"
 # cask "zoom"
@@ -59,3 +58,4 @@ tap "defenseunicorns/tap"
 brew "uds"
 brew "awscli"
 brew "yq"
+brew "git"
