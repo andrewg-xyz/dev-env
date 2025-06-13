@@ -19,7 +19,6 @@
 # cask "visual-studio-code"
 # brew "asdf"
 
-# cask "docker"
 # brew "helm"
 # brew "sops"
 # brew "jq"
@@ -60,3 +59,4 @@ brew "awscli"
 brew "yq"
 brew "git"
 brew "kubectl"
+cask "docker"
