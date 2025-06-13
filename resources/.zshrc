@@ -32,3 +32,4 @@ alias glo='git log --oneline --decorate'
 alias gst='git status --short --branch'
 
 [[ -f ~/.aliases ]] && source ~/.aliases
+
