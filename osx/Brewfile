@@ -16,7 +16,6 @@
 # brew "eksctl"
 # brew "aws-iam-authenticator" # dependency for eksctl, including here to get rid of annoying error message
 # brew "bat"
-# cask "visual-studio-code"
 # brew "asdf"
 
 # brew "helm"
@@ -60,3 +59,4 @@ brew "yq"
 brew "git"
 brew "kubectl"
 cask "docker"
+cask "visual-studio-code"
