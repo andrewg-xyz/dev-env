@@ -1,12 +1,3 @@
-# tap "homebrew/bundle"
-# tap "homebrew/cask-versions"
-
-# tap "homebrew/cask-fonts"
-# # cask "alacritty"
-# # brew "tmux"
-
-# # brew "git-lfs"
-# brew "tree"
 # cask "zoom"
 # brew "watch"
 # cask "drawio"
@@ -15,18 +6,10 @@
 # tap "weaveworks/tap"
 # brew "eksctl"
 # brew "aws-iam-authenticator" # dependency for eksctl, including here to get rid of annoying error message
-# brew "bat"
 # brew "asdf"
-
-# brew "helm"
-# brew "sops"
-# brew "jq"
-
 # brew "adr-tools"
-# cask "font-monaspace"
 # brew "typst"
 # brew "opentofu"
-# cask "android-studio"
 # brew "asciinema"
 # brew "agg"
 # brew "oras"
@@ -60,3 +43,5 @@ cask "docker"
 cask "visual-studio-code"
 brew "pre-commit"
 brew "node"
+brew "tree"
+brew "bat"
