@@ -34,8 +34,6 @@
 # brew "grype"
 # cask "crane"
 
-# brew "pre-commit"
-
 brew "zsh"
 cask "google-chrome"
 cask "hammerspoon"
@@ -60,3 +58,4 @@ brew "git"
 brew "kubectl"
 cask "docker"
 cask "visual-studio-code"
+brew "pre-commit"
