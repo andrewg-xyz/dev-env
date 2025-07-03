@@ -16,7 +16,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(macos)
 
 # docker desktop install doesn't auto do this....
-export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin/docker
+export PATH=$PATH:/Applications/Docker.app/Contents/Resources/bin
 
 # gh-dash config
 export GH_DASH_CONFIG="$HOME/dev-env/resources/gh-dash-config.yaml"
