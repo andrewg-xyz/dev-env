@@ -1,0 +1,9 @@
+command = /home/linuxbrew/.linuxbrew/bin/zsh
+
+background = 282c34
+foreground = ffffff
+
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+
+font-family = Adwaita Mono
