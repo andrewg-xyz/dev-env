@@ -9,12 +9,11 @@ config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
 
 
-config.keys = {
-    {
+config.keys = {{
         key = 'm',
         mods = 'CTRL',
-        action = wezterm.action.DisableDefaultAssignment,
-    },
+        action = wezterm.action.DisableDefaultAssignment,,
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},},
     {
         key = '|',
         mods = 'CMD|SHIFT',

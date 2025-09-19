@@ -35,3 +35,8 @@ alias glo='git log --oneline --decorate'
 alias gst='git status --short --branch'
 
 [[ -f ~/.aliases ]] && source ~/.aliases
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/andrewgreene/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
