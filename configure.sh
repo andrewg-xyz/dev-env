@@ -41,16 +41,16 @@ rm ~/.zshrc ~/.aliases ~/.wezterm.lua ~/.hammerspoon/init.lua
 mkdir -p ~/.hammerspoon/
 $script_path/bin/gsd configure # Use GSD to set links
 
-echo "Updating /etc/hosts and ssh config..."
 if [[ $network == "true" ]]; then
+    echo "Updating /etc/hosts and ssh config..."
     if [[ ! -a ~/dev-env/resources/buzzbert/hosts && ! -e ~/dev-env/resources/buzzbert/config ]]; then
         echo "...No host and config file found. not making life better"
     else
         echo "...Updating Hosts file"
         head="### BEGIN GENERATED CONTENT (unique-spiderman)"
         tail="### END GENERATED CONTENT"
-    newContent=`cat resources/buzzbert/hosts`
-    sudo sed -i.bak "/$head/,/$tail/d" /etc/hosts
+        newContent=`cat resources/buzzbert/hosts`
+        sudo sed -i.bak "/$head/,/$tail/d" /etc/hosts
         echo "...Adding custom configuration"
         newContent="$head\n$newContent\n$tail"
         echo $newContent | sudo tee -a /etc/hosts
