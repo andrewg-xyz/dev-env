@@ -1,6 +1,6 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
-config.default_prog = {"/bin/zsh", "-l", "-i"}
+config.default_prog = { "/bin/zsh", "-l", "-i" }
 
 config.font_size = 18
 config.color_scheme = "Dracula (Official)"
@@ -8,12 +8,7 @@ config.color_scheme = "Dracula (Official)"
 config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
 
-
-config.keys = {{
-        key = 'm',
-        mods = 'CTRL',
-        action = wezterm.action.DisableDefaultAssignment,,
-  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},},
+config.keys = {
     {
         key = '|',
         mods = 'CMD|SHIFT',
@@ -47,6 +42,3 @@ config.keys = {{
 }
 
 return config
-
-
-
