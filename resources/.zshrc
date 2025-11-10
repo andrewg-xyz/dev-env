@@ -6,7 +6,7 @@ ZSH_THEME="${ZSH_THEME:-robbyrussell}"
 DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="false" 
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -33,6 +33,9 @@ alias gc='git commit --verbose'
 alias gco='git checkout'
 alias glo='git log --oneline --decorate'
 alias gst='git status --short --branch'
+
+# k9s
+alias m='uds zarf tools monitor --headless'
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.

@@ -1,12 +1,6 @@
 # "https://dlvhdr.github.io/gh-dash/"
 
 prSections:
-  - filters: is:open repo:defenseunicorns/uds-registry
-    title: registry
-  - filters: is:open repo:defenseunicorns/uds-ui
-    title: ui
-  - filters: is:open repo:defenseunicorns/uds-appstore
-    title: appstore
   - filters: is:open author:@me
     title: mine
   - filters: is:open review-requested:@me
